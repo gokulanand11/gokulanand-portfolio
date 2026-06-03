@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { BookOpen, GraduationCap, MapPin, Target } from 'lucide-react';
 import Reveal from '../components/Reveal';
 import SectionHeading from '../components/SectionHeading';
@@ -21,32 +20,16 @@ const About = () => (
       />
 
       <div className="grid items-center gap-8 lg:grid-cols-[0.82fr_1.18fr]">
-        <Reveal className="glass-panel tech-frame overflow-hidden p-5">
-          <div className="aspect-[4/5] rounded-lg border border-white/10 bg-slate-950/70 p-6">
-            <div className="flex h-full flex-col justify-between">
-              <div className="flex items-center justify-between">
-                <span className="rounded-lg bg-cyan-300 px-3 py-2 text-sm font-black text-slate-950">
-                  GM
-                </span>
-                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
-                  Photo
-                </span>
-              </div>
-
-              <div className="grid place-items-center">
-                <motion.div
-                  className="grid h-44 w-44 place-items-center rounded-lg border border-cyan-300/25 bg-cyan-300/10 text-6xl font-black text-cyan-100 shadow-glow"
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                >
-            
-                </motion.div>
-              </div>
-
-              <div>
-                <p className="text-lg font-bold text-white">{profile.name}</p>
-                <p className="mt-2 text-sm leading-6 text-slate-300">{profile.role}</p>
-              </div>
+        <Reveal className="glass-panel tech-frame overflow-hidden p-3 sm:p-4">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-lg border border-white/10 bg-slate-950/70">
+            <img
+              src={profile.photo}
+              alt={profile.photoAlt}
+              className="h-full w-full object-cover object-top"
+            />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/78 to-transparent p-5 pt-20">
+              <p className="text-xl font-bold text-white">{profile.name}</p>
+              <p className="mt-2 text-sm leading-6 text-slate-300">{profile.role}</p>
             </div>
           </div>
         </Reveal>

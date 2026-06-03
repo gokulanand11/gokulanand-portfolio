@@ -100,15 +100,17 @@ const Hero = () => (
       >
         <div className="tech-frame glass-panel overflow-hidden p-5">
           <div className="grid gap-4">
-            <div className="flex items-center justify-between border-b border-white/10 pb-4">
+            <div className="flex items-center gap-4 border-b border-white/10 pb-4">
+              <img
+                src={profile.photo}
+                alt={profile.photoAlt}
+                className="h-16 w-16 shrink-0 rounded-lg border border-cyan-300/30 object-cover object-top shadow-glow"
+              />
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-300">
                   Neural Workspace
                 </p>
                 <p className="mt-1 text-2xl font-bold text-white">ML + Full Stack</p>
-              </div>
-              <div className="grid h-12 w-12 place-items-center rounded-lg bg-emerald-300 text-slate-950">
-                <BrainCircuit size={25} />
               </div>
             </div>
 

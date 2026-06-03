@@ -12,6 +12,8 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/gokulanand-m',
   github: 'https://github.com/gokulanand',
   resume: '/Gokulanand_M_Resume.pdf',
+  photo: '/images/gokulanand-m-profile.jpeg',
+  photoAlt: 'Portrait of Gokulanand M',
   intro:
     'Passionate AI & ML student focused on building intelligent solutions using Machine Learning, Web Development, and Computer Vision.',
   about:
